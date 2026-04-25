@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ZPath - Chart Your True North</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-container": "#0b1f3a",
+                      "on-secondary-fixed": "#001d32",
+                      "error": "#ba1a1a",
+                      "on-surface-variant": "#44474d",
+                      "on-error-container": "#93000a",
+                      "tertiary-container": "#310057",
+                      "on-tertiary-fixed-variant": "#680eac",
+                      "surface-dim": "#dbd9dc",
+                      "surface-tint": "#4d5f7d",
+                      "background": "#fbf9fb",
+                      "surface-bright": "#fbf9fb",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "inverse-on-surface": "#f2f0f3",
+                      "on-tertiary-container": "#ad62f2",
+                      "on-secondary-container": "#003f63",
+                      "on-background": "#1b1b1e",
+                      "on-primary-fixed-variant": "#364764",
+                      "inverse-surface": "#303033",
+                      "surface-container": "#efedf0",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-high": "#e9e7ea",
+                      "secondary-fixed": "#cde5ff",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#0d001d",
+                      "surface": "#fbf9fb",
+                      "tertiary-fixed": "#f1dbff",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#35adff",
+                      "inverse-primary": "#b5c7ea",
+                      "outline": "#75777e",
+                      "on-surface": "#1b1b1e",
+                      "primary-fixed": "#d6e3ff",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#004a75",
+                      "on-primary-fixed": "#071c36",
+                      "surface-container-low": "#f5f3f6",
+                      "primary-fixed-dim": "#b5c7ea",
+                      "surface-variant": "#e4e2e5",
+                      "on-tertiary-fixed": "#2d0050",
+                      "surface-container-highest": "#e4e2e5",
+                      "secondary": "#006399",
+                      "primary": "#000615",
+                      "tertiary-fixed-dim": "#deb7ff",
+                      "on-primary-container": "#7587a7",
+                      "secondary-fixed-dim": "#95ccff",
+                      "outline-variant": "#c4c6ce"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin": "auto",
+                      "md": "16px",
+                      "gutter": "24px",
+                      "xxl": "64px",
+                      "sm": "8px",
+                      "lg": "24px",
+                      "xs": "4px",
+                      "unit": "8px",
+                      "xl": "32px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Manrope"
+                      ],
+                      "label-bold": [
+                              "Manrope"
+                      ],
+                      "h3": [
+                              "Manrope"
+                      ],
+                      "body-lg": [
+                              "Manrope"
+                      ],
+                      "h1": [
+                              "Manrope"
+                      ],
+                      "h2": [
+                              "Manrope"
+                      ],
+                      "caption": [
+                              "Manrope"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "h3": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "h1": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "h2": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md text-body-md antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-[0_10px_30px_rgba(29,161,242,0.08)]">
+<div class="flex justify-between items-center h-16 px-6 md:px-12 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-[#0B1F3A] dark:text-white font-manrope tracking-tight">ZPath</div>
+<a class="bg-gradient-to-r from-secondary to-tertiary-container text-white px-6 py-2 rounded-full font-label-bold text-label-bold hover:shadow-[0_0_15px_rgba(53,173,255,0.5)] transition-all duration-300 inline-block" onclick="document.getElementById('stay-ahead').scrollIntoView({behavior: 'smooth'}); return false;" style="cursor: pointer;">Get Started</a>
+</div>
+</header>
+<main class="pt-24 pb-xxl">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 py-xxl flex flex-col items-center justify-center text-center relative">
+<div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-secondary-fixed/30 via-background to-background"></div>
+<h1 class="font-h1 text-h1 text-primary-container mb-md leading-tight max-w-4xl">Chart Your True North</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-xl">Navigate your professional journey with precision. ZPath's advanced AI engine analyzes your unique profile to illuminate the most promising career pathways tailored specifically for you.</p>
+<a class="bg-gradient-to-r from-secondary to-tertiary-container text-white px-8 py-4 rounded-full font-label-bold text-label-bold hover:shadow-[0_0_20px_rgba(53,173,255,0.6)] transition-all duration-300 flex items-center gap-sm text-lg w-fit" onclick="document.getElementById('stay-ahead').scrollIntoView({behavior: 'smooth'}); return false;" style="cursor: pointer;">
+                Start searching for newest info
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+</a>
+</section>
+<!-- Module 1: AI Mentorship Engine -->
+<section class="max-w-7xl mx-auto px-6 py-xxl">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div>
+<h2 class="font-h2 text-h2 text-primary-container mb-md">AI Mentorship Engine</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">Our sophisticated algorithms act as your personal career counselor. By evaluating your academic subjects, current scores, broader economic trends, and your SBTI profile, we predict your highest probability paths to success.</p>
+<div class="bg-surface-container-low rounded-xl p-md border border-outline-variant mb-lg">
+<div class="flex justify-between items-center mb-sm">
+<span class="font-label-bold text-label-bold text-on-surface">Economic Focus Weighting</span>
+<span class="font-caption text-caption text-secondary">Balanced</span>
+</div>
+<div class="relative w-full h-2 bg-surface-variant rounded-full">
+<div class="absolute top-0 left-1/4 right-1/4 h-full bg-secondary rounded-full"></div>
+<div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-4 h-4 bg-white border-2 border-secondary rounded-full shadow-sm"></div>
+<div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-4 h-4 bg-white border-2 border-secondary rounded-full shadow-sm"></div>
+</div>
+<div class="flex justify-between mt-xs font-caption text-caption text-outline">
+<span>Stability</span>
+<span>Growth</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-md">
+<!-- High Match -->
+<div class="glass-panel rounded-xl p-md flex items-center gap-md border-l-4 border-l-[#10B981]">
+<div class="w-12 h-12 rounded-full bg-[#D1FAE5] flex items-center justify-center text-[#059669]">
+<span class="material-symbols-outlined">data_object</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-h3 text-[20px] text-primary-container">Data Scientist</h3>
+<div class="flex items-center gap-xs mt-xs">
+<div class="w-full bg-surface-variant rounded-full h-1.5">
+<div class="bg-[#10B981] h-1.5 rounded-full" style="width: 85%"></div>
+</div>
+<span class="font-caption text-caption text-[#10B981] font-bold">85% Match</span>
+</div>
+</div>
+</div>
+<!-- Medium Match -->
+<div class="glass-panel rounded-xl p-md flex items-center gap-md border-l-4 border-l-[#F59E0B]">
+<div class="w-12 h-12 rounded-full bg-[#FEF3C7] flex items-center justify-center text-[#D97706]">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-h3 text-[20px] text-primary-container">Financial Analyst</h3>
+<div class="flex items-center gap-xs mt-xs">
+<div class="w-full bg-surface-variant rounded-full h-1.5">
+<div class="bg-[#F59E0B] h-1.5 rounded-full" style="width: 65%"></div>
+</div>
+<span class="font-caption text-caption text-[#F59E0B] font-bold">65% Match</span>
+</div>
+</div>
+</div>
+<!-- Low Match -->
+<div class="glass-panel rounded-xl p-md flex items-center gap-md border-l-4 border-l-[#EF4444]">
+<div class="w-12 h-12 rounded-full bg-[#FEE2E2] flex items-center justify-center text-[#B91C1C]">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-h3 text-[20px] text-primary-container">Creative Director</h3>
+<div class="flex items-center gap-xs mt-xs">
+<div class="w-full bg-surface-variant rounded-full h-1.5">
+<div class="bg-[#EF4444] h-1.5 rounded-full" style="width: 40%"></div>
+</div>
+<span class="font-caption text-caption text-[#EF4444] font-bold">40% Match</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Module 2: Global Data Library -->
+<section class="bg-surface-container-low py-xxl">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-xl">
+<h2 class="font-h2 text-h2 text-primary-container mb-sm">Global Data Library</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Access our comprehensive repository of institutional data, benchmarking scores, and macro-economic trends to inform your strategy.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Item 1 -->
+<div class="bg-white rounded-xl p-lg border border-outline-variant shadow-[0_10px_30px_rgba(29,161,242,0.08)] hover:-translate-y-1 transition-transform duration-300">
+<div class="w-12 h-12 rounded-lg bg-error-container text-on-error-container flex items-center justify-center mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
+</div>
+<h3 class="font-h3 text-[20px] text-primary-container mb-sm">Admission Plans</h3>
+<p class="font-caption text-caption text-on-surface-variant mb-md">Detailed PDF breakdowns of global university admission strategies.</p>
+<button class="text-secondary font-label-bold text-label-bold flex items-center gap-xs hover:text-secondary-container transition-colors">
+                            View Document <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Item 2 -->
+<div class="bg-white rounded-xl p-lg border border-outline-variant shadow-[0_10px_30px_rgba(29,161,242,0.08)] hover:-translate-y-1 transition-transform duration-300">
+<div class="w-12 h-12 rounded-lg bg-[#E0F2F1] text-[#00695C] flex items-center justify-center mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">table</span>
+</div>
+<h3 class="font-h3 text-[20px] text-primary-container mb-sm">Benchmark Scores</h3>
+<p class="font-caption text-caption text-on-surface-variant mb-md">Comprehensive Excel datasets comparing historical academic requirements.</p>
+<button class="text-secondary font-label-bold text-label-bold flex items-center gap-xs hover:text-secondary-container transition-colors">
+                            Download Data <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Item 3 -->
+<div class="bg-white rounded-xl p-lg border border-outline-variant shadow-[0_10px_30px_rgba(29,161,242,0.08)] hover:-translate-y-1 transition-transform duration-300">
+<div class="w-12 h-12 rounded-lg bg-[#E0F2F1] text-[#00695C] flex items-center justify-center mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+</div>
+<h3 class="font-h3 text-[20px] text-primary-container mb-sm">Major Trends</h3>
+<p class="font-caption text-caption text-on-surface-variant mb-md">Statistical models in Excel format tracking emerging industry demands.</p>
+<button class="text-secondary font-label-bold text-label-bold flex items-center gap-xs hover:text-secondary-container transition-colors">
+                            Download Data <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Stay Ahead Section -->
+<section class="max-w-4xl mx-auto px-6 py-xxl" id="stay-ahead">
+<div class="bg-primary-container rounded-2xl p-xl relative overflow-hidden" id="contact-form">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary rounded-full filter blur-[80px] opacity-20 -translate-y-1/2 translate-x-1/4"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-tertiary-container rounded-full filter blur-[80px] opacity-20 translate-y-1/2 -translate-x-1/4"></div>
+<div class="relative z-10 text-center mb-lg">
+<h2 class="font-h2 text-h2 text-white mb-sm">Stay Ahead of the Curve</h2>
+<p class="font-body-md text-body-md text-inverse-primary">Join our network to receive early access to new AI models and exclusive career insights.</p>
+</div>
+<form class="relative z-10 max-w-lg mx-auto space-y-md">
+<div>
+<label class="block font-caption text-caption text-inverse-primary mb-xs" for="fullName">Full Name</label>
+<input class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors" id="fullName" placeholder="Jane Doe" type="text"/>
+</div>
+<div>
+<label class="block font-caption text-caption text-inverse-primary mb-xs" for="phone">Phone Number (Optional)</label>
+<input class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors" id="phone" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div>
+<label class="block font-caption text-caption text-inverse-primary mb-xs" for="email">Email Address</label>
+<input class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors" id="email" placeholder="jane@example.com" type="email"/>
+</div>
+<button class="w-full bg-gradient-to-r from-secondary to-tertiary-container text-white py-3 rounded-lg font-label-bold text-label-bold hover:shadow-[0_0_15px_rgba(53,173,255,0.4)] transition-all duration-300 mt-md" type="submit">Subscribe Now</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0B1F3A] dark:bg-slate-950 w-full py-12 border-t border-slate-800">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-xl font-bold text-white bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent font-manrope text-sm">ZPath</div>
+<nav class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+<a class="text-slate-400 hover:text-white dark:hover:text-cyan-200 transition-colors hover:underline underline-offset-4 font-manrope text-sm" href="#">Pathways</a>
+<a class="text-slate-400 hover:text-white dark:hover:text-cyan-200 transition-colors hover:underline underline-offset-4 font-manrope text-sm" href="#">Mentors</a>
+<a class="text-slate-400 hover:text-white dark:hover:text-cyan-200 transition-colors hover:underline underline-offset-4 font-manrope text-sm" href="#">Success Stories</a>
+<a class="text-slate-400 hover:text-white dark:hover:text-cyan-200 transition-colors hover:underline underline-offset-4 font-manrope text-sm" href="#">Privacy</a>
+<a class="text-slate-400 hover:text-white dark:hover:text-cyan-200 transition-colors hover:underline underline-offset-4 font-manrope text-sm" href="#">Terms</a>
+</nav>
+<div class="text-slate-400 font-manrope text-sm text-center md:text-right">© 2024 ZPath Career Orientation. All rights reserved.</div>
+</div>
+</footer>
+</body></html>
