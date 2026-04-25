@@ -318,7 +318,7 @@
 <h2 class="font-h2 text-h2 text-white mb-sm">Stay Ahead of the Curve</h2>
 <p class="font-body-md text-body-md text-inverse-primary">Join our network to receive early access to new AI models and exclusive career insights.</p>
 </div>
-<form class="relative z-10 max-w-lg mx-auto space-y-md">
+<!-- <form class="relative z-10 max-w-lg mx-auto space-y-md">
 <div>
 <label class="block font-caption text-caption text-inverse-primary mb-xs" for="fullName">Full Name</label>
 <input class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors" id="fullName" placeholder="Nguyen Van A" type="text"/>
@@ -332,6 +332,27 @@
 <input class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors" id="email" placeholder="meomeo@gmail.com" type="email"/>
 </div>
 <button class="w-full bg-gradient-to-r from-secondary to-tertiary-container text-white py-3 rounded-lg font-label-bold text-label-bold hover:shadow-[0_0_15px_rgba(53,173,255,0.4)] transition-all duration-300 mt-md" type="submit">Subscribe Now</button>
+</form> -->
+<form 
+    action="https://formspree.io/f/xeevnwol" 
+    method="POST"
+    class="relative z-10 max-w-lg mx-auto space-y-md"
+>
+    <div>
+        <label class="block font-caption text-caption text-inverse-primary mb-xs" for="fullName">Full Name</label>
+        <input name="name" required class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors" id="fullName" placeholder="Nguyen Van A" type="text"/>
+    </div>
+    <div>
+        <label class="block font-caption text-caption text-inverse-primary mb-xs" for="phone">Phone Number (Optional)</label>
+        <input name="phone" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors" id="phone" placeholder="+84 012 3456 789" type="tel"/>
+    </div>
+    <div>
+        <label class="block font-caption text-caption text-inverse-primary mb-xs" for="email">Email Address</label>
+        <input name="email" required class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors" id="email" placeholder="meomeo@gmail.com" type="email"/>
+    </div>
+    <button class="w-full bg-gradient-to-r from-secondary to-tertiary-container text-white py-3 rounded-lg font-label-bold text-label-bold hover:shadow-[0_0_15px_rgba(53,173,255,0.4)] transition-all duration-300 mt-md" type="submit">
+        Subscribe Now
+    </button>
 </form>
 </div>
 </section>
